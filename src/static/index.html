@@ -13,10 +13,51 @@
     </header>
 
     <main>
+      <section id="auth-container">
+        <h3>Account Access</h3>
+        <p id="auth-status">Checking session...</p>
+
+        <div id="auth-forms">
+          <form id="login-form">
+            <h4>Login</h4>
+            <div class="form-group">
+              <label for="login-email">Email:</label>
+              <input type="email" id="login-email" required placeholder="your-email@mergington.edu" />
+            </div>
+            <div class="form-group">
+              <label for="login-password">Password:</label>
+              <input type="password" id="login-password" required placeholder="min 6 chars" />
+            </div>
+            <button type="submit">Login</button>
+          </form>
+
+          <form id="create-account-form">
+            <h4>Sign Up</h4>
+            <div class="form-group">
+              <label for="signup-email">Email:</label>
+              <input type="email" id="signup-email" required placeholder="new-email@mergington.edu" />
+            </div>
+            <div class="form-group">
+              <label for="signup-password">Password:</label>
+              <input type="password" id="signup-password" required placeholder="min 6 chars" />
+            </div>
+            <div class="form-group">
+              <label for="signup-role">Role:</label>
+              <select id="signup-role">
+                <option value="student">Student</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
+            <button type="submit">Create Account</button>
+          </form>
+        </div>
+
+        <button id="logout-button" class="hidden">Logout</button>
+      </section>
+
       <section id="activities-container">
         <h3>Available Activities</h3>
         <div id="activities-list">
-          <!-- Activities will be loaded here -->
           <p>Loading activities...</p>
         </div>
       </section>
@@ -25,18 +66,14 @@
         <h3>Sign Up for an Activity</h3>
         <form id="signup-form">
           <div class="form-group">
-            <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
-          </div>
-          <div class="form-group">
             <label for="activity">Select Activity:</label>
             <select id="activity" required>
               <option value="">-- Select an activity --</option>
-              <!-- Activity options will be loaded here -->
             </select>
           </div>
           <button type="submit">Sign Up</button>
         </form>
+        <p id="signup-hint">Please log in to register for activities.</p>
         <div id="message" class="hidden"></div>
       </section>
     </main>
